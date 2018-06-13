@@ -5,5 +5,5 @@ age INTEGER,
 gender VARCHAR(1) NOT NULL CHECK (gender IN('M','F')),
 color TEXT,
 temperament TEXT,
-alive 
+alive BIT
 );
