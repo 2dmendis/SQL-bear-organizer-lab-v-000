@@ -19,13 +19,13 @@ def select_youngest_bear_and_returns_name_and_age
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "select color, max(color) as highest_total
-  from (
-       select SuperVisor                               
-            , count(ContractNo) as totalcontracts       
-         from Contract                                    
-       group 
-           by SuperVisor                              
+  "SELECT MAX(totalColor) as highest_total
+  FROM (
+       SELECT color                               
+            , COUNT(color) as totalColor       
+         FROM bears                                    
+       GROUP 
+           BY color                       
        )"
 end
 
